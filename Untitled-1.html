@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哈尔滨冰雪之旅攻略</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 40px;
+            background-image: linear-gradient(to bottom, #e6f7ff, #f0f8ff);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .travel-guide {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e0f0ff;
+        }
+        
+        .external-links {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0f0ff;
+        }
+        
+        h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e6f2ff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2 i {
+            color: #2a5298;
+        }
+        
+        .destination {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f7ff;
+        }
+        
+        .destination h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .travel-links {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .travel-links li {
+            margin-bottom: 12px;
+        }
+        
+        .travel-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #2a5298;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #f5fbff;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #2a5298;
+        }
+        
+        .travel-links a:hover {
+            background-color: #e6f2ff;
+            transform: translateX(5px);
+            color: #1e3c72;
+            border-left-color: #1e3c72;
+        }
+        
+        .travel-links a i {
+            font-size: 1.2rem;
+        }
+        
+        .external-links-container {
+            flex-grow: 1;
+            background-color: #f8fcff;
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid #e0f0ff;
+        }
+        
+        .external-link-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2a5298;
+            transition: all 0.3s ease;
+        }
+        
+        .external-link-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .external-link-item h4 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .external-link-item p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .external-link-item a {
+            display: inline-block;
+            background-color: #2a5298;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .external-link-item a:hover {
+            background-color: #1e3c72;
+            transform: translateY(-2px);
+        }
+        
+        .link-tag {
+            display: inline-block;
+            background-color: #e6f2ff;
+            color: #2a5298;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-left: 10px;
+            font-weight: 500;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid #e0f0ff;
+        }
+        
+        .tag {
+            background-color: #e6f2ff;
+            color: #2a5298;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .destination-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        
+        .recommendation {
+            font-size: 0.85rem;
+            color: #ff6b6b;
+            font-weight: 500;
+        }
+        
+        .links-intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f5fbff;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+        }
+        
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .travel-guide, .external-links {
+                width: 100%;
+            }
+            
+            .destination-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+        
+        .season-tag {
+            background-color: #ffebee;
+            color: #d32f2f;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-left: 5px;
+        }
+        
+        .link-counter {
+            display: inline-block;
+            background-color: #2a5298;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-snowflake"></i> sq冰雪之旅攻略</h1>
+            <p class="subtitle">探索北国冰雪奇观，体验东北独特风情。我爱你珊珊我爱你珊珊我超级爱你</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="content-wrapper">
+            <section class="travel-guide">
+                <h2><i class="fas fa-map-marked-alt"></i> 哈尔滨及周边景点</h2>
+                
+                <div class="destination">
+                    <div class="destination-info">
+                        <h3>中央大街 <span class="tag">哈尔滨市区</span></h3>
+                        <span class="recommendation">推荐指数：★★★★★</span>
+                    </div>
+                    <p>中央大街是哈尔滨最繁华的商业街，始建于1900年，全长1450米。街道两侧汇集了文艺复兴、巴洛克等多种风格的建筑，被誉为"建筑艺术博物馆"。</p>
+                    <ul class="travel-links">
+                        <li><a href="#central-street" data-link-type="external" onclick="showLinks('central-street')"><i class="fas fa-external-link-alt"></i> 中央大街相关链接</a></li>
+                    </ul>
+                </div>
+                
+                <div class="destination">
+                    <div class="destination-info">
+                        <h3>冰雪大世界 <span class="tag">哈尔滨</span><span class="season-tag">冬季限定</span></h3>
+                        <span class="recommendation">推荐指数：★★★★★</span>
+                    </div>
+                    <p>哈尔滨冰雪大世界始创于1999年，是世界上最大的冰雪主题乐园。每年冬季用数万立方米的冰和雪建造而成，夜晚灯光璀璨，宛如童话世界。</p>
+                    <ul class="travel-links">
+                        <li><a href="#ice-world" data-link-type="external" onclick="showLinks('ice-world')"><i class="fas fa-external-link-alt"></i> 冰雪大世界相关链接</a></li>
+                    </ul>
+                </div>
+                
+                <div class="destination">
+                    <div class="destination-info">
+                        <h3>雪乡 <span class="tag">牡丹江</span><span class="season-tag">冬季最佳</span></h3>
+                        <span class="recommendation">推荐指数：★★★★☆</span>
+                    </div>
+                    <p>雪乡位于牡丹江市双峰林场，因积雪期长达7个月，雪质好、粘度高，形成独特的"雪蘑菇"、"雪屋顶"等自然景观，是中国雪景最美的地方之一。</p>
+                    <ul class="travel-links">
+                        <li><a href="#snow-village" data-link-type="external" onclick="showLinks('snow-village')"><i class="fas fa-external-link-alt"></i> 雪乡相关链接</a></li>
+                    </ul>
+                </div>
+                
+                <div class="destination">
+                    <div class="destination-info">
+                        <h3>王朝圣地温泉酒店 <span class="tag">哈尔滨</span></h3>
+                        <span class="recommendation">推荐指数：★★★★☆</span>
+                    </div>
+                    <p>王朝圣地温泉酒店是哈尔滨著名的温泉度假胜地，结合了冰雪体验与温泉疗养。在冰天雪地中泡温泉，感受冰火两重天的独特体验。</p>
+                    <ul class="travel-links">
+                        <li><a href="#hotel" data-link-type="external" onclick="showLinks('hotel')"><i class="fas fa-external-link-alt"></i> 温泉酒店相关链接</a></li>
+                    </ul>
+                </div>
+                
+                <div class="destination">
+                    <div class="destination-info">
+                        <h3>麓角村 <span class="tag">哈尔滨周边</span></h3>
+                        <span class="recommendation">推荐指数：★★★☆☆</span>
+                    </div>
+                    <p>麓角村是哈尔滨周边的一个传统村落，保留了东北农村的原始风貌。冬季的麓角村被白雪覆盖，静谧而美丽，适合体验纯正的东北乡村生活。</p>
+                    <ul class="travel-links">
+                        <li><a href="#village" data-link-type="external" onclick="showLinks('village')"><i class="fas fa-external-link-alt"></i> 麓角村相关链接</a></li>
+                    </ul>
+                </div>
+                
+                <div class="destination">
+                    <div class="destination-info">
+                        <h3>恩都里 <span class="tag">哈尔滨周边</span></h3>
+                        <span class="recommendation">推荐指数：★★★☆☆</span>
+                    </div>
+                    <p>恩都里是满语"河流"的意思，这里是一个自然风景区，冬季河流部分结冰，两岸树木挂满雾凇，形成美丽的冰雪景观。</p>
+                    <ul class="travel-links">
+                        <li><a href="#river" data-link-type="external" onclick="showLinks('river')"><i class="fas fa-external-link-alt"></i> 恩都里相关链接</a></li>
+                    </ul>
+                </div>
+                
+                <div class="destination">
+                    <div class="destination-info">
+                        <h3>魔界/雾凇岛漂流 <span class="tag">吉林</span><span class="season-tag">冬季限定</span></h3>
+                        <span class="recommendation">推荐指数：★★★★☆</span>
+                    </div>
+                    <p>雾凇岛位于吉林市，因冬季雾凇景观而闻名。魔界漂流是在雾凇岛进行的冬季漂流活动，游客乘坐橡皮艇在雾凇环绕的河面上漂流，如同进入魔法世界。</p>
+                    <ul class="travel-links">
+                        <li><a href="#rafting" data-link-type="external" onclick="showLinks('rafting')"><i class="fas fa-external-link-alt"></i> 雾凇岛相关链接</a></li>
+                    </ul>
+                </div>
+                
+                <div class="destination">
+                    <div class="destination-info">
+                        <h3>长白山北坡天池 <span class="tag">吉林</span></h3>
+                        <span class="recommendation">推荐指数：★★★★★</span>
+                    </div>
+                    <p>长白山是中国东北最高峰，北坡天池是长白山最著名的景点。冬季的天池被冰雪覆盖，周围群山白雪皑皑，景色壮观。</p>
+                    <ul class="travel-links">
+                        <li><a href="#tianchi" data-link-type="external" onclick="showLinks('tianchi')"><i class="fas fa-external-link-alt"></i> 长白山天池相关链接</a></li>
+                    </ul>
+                </div>
+                
+                <div class="destination">
+                    <div class="destination-info">
+                        <h3>延吉网红墙 <span class="tag">延边</span></h3>
+                        <span class="recommendation">推荐指数：★★★☆☆</span>
+                    </div>
+                    <p>延吉网红墙位于延边大学对面，是一面布满双语招牌（中文和朝鲜文）的建筑外墙，因独特的视觉效果成为社交媒体上的热门打卡地。</p>
+                    <ul class="travel-links">
+                        <li><a href="#wall" data-link-type="external" onclick="showLinks('wall')"><i class="fas fa-external-link-alt"></i> 延吉网红墙相关链接</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="external-links">
+                <h2><i class="fas fa-external-link-alt"></i> 实用外部链接</h2>
+                
+                <div class="links-intro">
+                    <p><i class="fas fa-info-circle"></i> 点击左侧景点下方的链接，此处将显示该景点的实用外部链接，包括攻略、门票预订、地图等。</p>
+                </div>
+                
+                <div class="external-links-container" id="links-container">
+                    <!-- 中央大街链接 -->
+                    <div class="external-link-group" id="central-street-links">
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">1</span> 中央大街官方介绍 <span class="link-tag">官方</span></h4>
+                            <p>哈尔滨中央大街的详细介绍、历史背景和主要景点。</p>
+                            <a href="https://baike.baidu.com/item/%E5%93%88%E5%B0%94%E6%BB%A8%E4%B8%AD%E5%A4%AE%E5%A4%A7%E8%A1%97" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">2</span> 中央大街旅游攻略 <span class="link-tag">攻略</span></h4>
+                            <p>马蜂窝上关于中央大街的详细旅游攻略，包含美食推荐、最佳游览时间等。</p>
+                            <a href="https://v.douyin.com/XLr9SBZOsSI/ B@t.eB" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">3</span> 中央大街地图位置 <span class="link-tag">地图</span></h4>
+                            <p>百度地图上的中央大街位置，方便规划行程路线。</p>
+                            <a href="https://map.baidu.com/search/%E4%B8%AD%E5%A4%AE%E5%A4%A7%E8%A1%97/@12958992.85,4861143.89,15z?querytype=nav&c=131&sn=1$$$$" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- 冰雪大世界链接 -->
+                    <div class="external-link-group" id="ice-world-links" style="display:none">
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">1</span> 冰雪大世界官方网站 <span class="link-tag">官方</span></h4>
+                            <p>哈尔滨冰雪大世界官方网站，包含最新活动信息、门票价格和开放时间。</p>
+                            <a href="http://www.hrbicesnow.com/" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">2</span> 冰雪大世界门票预订 <span class="link-tag">预订</span></h4>
+                            <p>携程上的冰雪大世界门票预订，可在线购买电子票。</p>
+                            <a href="https://www.ctrip.com/" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">3</span> 冰雪大世界游玩攻略 <span class="link-tag">攻略</span></h4>
+                            <p>小红书上的冰雪大世界游玩攻略，包含拍照技巧和必玩项目。</p>
+                            <a href="https://v.douyin.com/ziuYOulEKvM/" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- 雪乡链接 -->
+                    <div class="external-link-group" id="snow-village-links" style="display:none">
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">1</span> 雪乡景区介绍 <span class="link-tag">33专用</span></h4>
+                            <p>中国雪乡包含景区介绍。</p>
+                            <a href="https://v.douyin.com/3jUbbvjBG8c/" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">2</span> 雪乡摄影攻略 <span class="link-tag">摄影</span></h4>
+                            <p>摄影爱好者分享的雪乡拍摄技巧和最佳拍摄地点。</p>
+                            <a href="https://v.douyin.com/7C7FkuojSaE/" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- 温泉酒店链接 -->
+                    <div class="external-link-group" id="hotel-links" style="display:none">
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">2</span> 温泉酒店 <span class="link-tag"></span></h4>
+                            <p>温泉酒店介绍。</p>
+                            <a href="https://v.douyin.com/1gMtlT9Sc1o/" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- 麓角村链接 -->
+                    <div class="external-link-group" id="village-links" style="display:none">
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">1</span> 麓角村旅游介绍 <span class="link-tag">介绍</span></h4>
+                            <p>麓角村的详细介绍，及dr皇冠。</p>
+                            <a href="https://v.douyin.com/MY7SlQYRbqU/" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- 恩都里链接 -->
+                    <div class="external-link-group" id="river-links" style="display:none">
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">1</span> 恩都里自然风景区 <span class="link-tag">介绍</span></h4>
+                            <p>恩都里自然风景区的详细介绍，包含最佳游览季节和主要景观。</p>
+                            <a href="https://v.douyin.com/6vvjdXev-BM/" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- 雾凇岛链接 -->
+                    <div class="external-link-group" id="rafting-links" style="display:none">
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">3</span> 雾凇岛攻略 <span class="link-tag">攻略</span></h4>
+                            <p>雾凇岛最佳拍摄地点和时间，以及冬季摄影注意事项。</p>
+                            <a href="https://v.douyin.com/ddP2qG2FpaA/ " target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- 长白山天池链接 -->
+                    <div class="external-link-group" id="tianchi-links" style="display:none">
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">1</span> 长白山北坡及其天池 <span class="link-tag">官方</span></h4>
+                            <p>长白山景区，包含北坡天池的详细介绍和游览信息。</p>
+                            <a href="https://v.douyin.com/jj2dAPWAnbI/" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- 延吉网红墙链接 -->
+                    <div class="external-link-group" id="wall-links" style="display:none">
+                        <div class="external-link-item">
+                            <h4><span class="link-counter">3</span> 延吉风景 <span class="link-tag">风景</span></h4>
+                            <p>延吉市网红墙。</p>
+                            <a href=" https://v.douyin.com/trvXTf8bznw/" target="_blank">访问链接 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>© 2023 哈尔滨冰雪之旅攻略 | 探索北国冰雪奇观 | 使用HTML、CSS和JavaScript创建</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; color: #888;">注：所有外部链接仅供参考，点击后将跳转到第三方网站</p>
+        </footer>
+    </div>
+
+    <script>
+        // 显示对应景点的外部链接
+        function showLinks(linkType) {
+            // 隐藏所有链接组
+            document.querySelectorAll('.external-link-group').forEach(group => {
+                group.style.display = 'none';
+            });
+            
+            // 显示选中的链接组
+            const selectedLinks = document.getElementById(linkType + '-links');
+            if(selectedLinks) {
+                selectedLinks.style.display = 'block';
+                
+                // 滚动到链接区域
+                document.getElementById('links-container').scrollIntoView({behavior: 'smooth'});
+            }
+        }
+        
+        // 页面加载时显示中央大街的链接
+        document.addEventListener('DOMContentLoaded', function() {
+            showLinks('central-street');
+        });
+    </script>
+</body>
+</html>
